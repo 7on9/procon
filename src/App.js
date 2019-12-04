@@ -21,6 +21,26 @@ export default class App extends Component {
     return (
       <div>
         <input
+          placeholder="Team ID"
+          onChange={e => this.setState({ teamID: e.target.value })}
+        />
+        <button
+          onClick={() => localStorage.setItem("teamID", this.state.teamID)}
+        >
+          Set team id
+        </button>
+        <br />
+        <input
+          placeholder="Match ID"
+          onChange={e => this.setState({ matchID: e.target.value })}
+        />
+        <button
+          onClick={() => localStorage.setItem("matchID", this.state.matchID)}
+        >
+          Set match id
+        </button>
+        <br />
+        <input
           placeholder="TOKEN"
           onChange={e => this.setState({ token: e.target.value })}
         />
