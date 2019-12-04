@@ -2,8 +2,12 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Map } from "./pages";
+import { api } from "./services/callApi";
 
 export default class App extends Component {
+  componentWillMount(){
+    api.getCurrMatch();
+  }
   render() {
     return (
       <div>
