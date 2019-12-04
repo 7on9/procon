@@ -19,7 +19,7 @@ export const api = {
             method: "POST",
             data: actionList
         }).then(res => {
-            res.action.forEach(agent => {
+            res.data.action.forEach(agent => {
                 let id = agent.agentID;
                 let dx = agent.dx;
                 let dy = agent.dy;
