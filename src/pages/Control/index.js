@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { dataProvider } from '../../services/dataProvider'
 
-export default class Control extends Component {
+class Control extends Component {
   render() {
     return (
       <div>
@@ -61,3 +62,4 @@ export default class Control extends Component {
     )
   }
 }
+export default Control;
