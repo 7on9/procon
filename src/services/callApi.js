@@ -7,10 +7,10 @@ export const api = {
             localStorage.setItem('matches', JSON.stringify(res.data[0]));
         }).catch(err => console(err));
     },
-    getCurrMatch: ()=>{
-        let matches = JSON.parse(localStorage.getItem('matches'));
-        dataProvider(`/matches/${matches.teamID}`).then(res => {
-            localStorage.setItem('matchCurr', JSON.stringify(res.data));
+    getCurrMatch: async ()=>{
+        let matches = await JSON.parse(localStorage.getItem('matchID'));
+        dataProvider(`/matches/${matches}`).then(res => {
+            localStorage.setItem('currMatch', JSON.stringify(res.data));
         }).catch(err => console.log(err));
     },
     sendAction: (actionList)=>{
@@ -23,7 +23,7 @@ export const api = {
                 let id = agent.agentID;
                 let dx = agent.dx;
                 let dy = agent.dy;
-                let matchCurr = JSON.parse(localStorage.getItem('matchCurr'));
+                let matchCurr = JSON.parse(localStorage.getItem('currMatch'));
                 let {tiled, teams} = matchCurr;
                 let team;
                 for (let i=0;i<teams.length;i++){

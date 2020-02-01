@@ -24,16 +24,11 @@ class Control extends Component {
     api.sendAction(actions)
   };
   render() {
-    // let { team } = this.state.matches
-    // let { teams } = this.state.currMatch
-    // team = team ? team[0] : null
-    // let thisTeam = teams.forEach(t => {
-    //   if (t.teamID === team.teamID) {
-    //     return t
-    //   }
-    // })
     return (
       <div>
+        <button>
+          
+        </button>
         <table>
           <tr>
             <td>

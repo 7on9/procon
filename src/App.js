@@ -3,8 +3,12 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Map } from "./pages";
 import Control from "./pages/Control";
+import { api } from "./services/callApi";
 
 export default class App extends Component {
+  componentWillMount() {
+    api.getCurrMatch()
+  }
   renderAgent = () => {
     let agents = []
     for (let i = 1; i <= 15; i++) {
